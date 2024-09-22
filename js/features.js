@@ -1,9 +1,12 @@
 console.log('connected feature.js');
-function getInputValueByID(id){
+function getInputValueById(id){
 
-    const value= document.getElementById(id).value;
+    return document.getElementById(id).value;;
+}
+function getInnerTextById(id){
 
-    return value;
+    return parseFloat(document.getElementById(id).innerText);
+
 }
 function inputFieldValidation(input){
 
@@ -14,8 +17,10 @@ function inputFieldValidation(input){
            return false;
         }
     }
-    return true;
+
+    return parseFloat(input);
 }
+
 
 function showAlert(){
     alert('Invalid Donation Amount');
