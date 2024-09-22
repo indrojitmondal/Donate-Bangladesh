@@ -50,68 +50,89 @@
 
     </head>
     <body class="font-lexend">
-      <nav class="w-11/12 mx-auto pt-2 pb-8 sticky top-0 z-20 bg-white">
+        <nav class="w-11/12 mx-auto pt-2 pb-8 sticky top-0 z-20 bg-white">
 
-        <section class="flex justify-between items-center">
-            <a href="">Blog</a>
-            
-            <div class="flex items-center">
-                <img src="assets/logo.png" alt="logo">
-                <h3>Donate Bangladesh</h3>
-            </div>
+            <section class="flex justify-between items-center">
+                <a href>Blog</a>
 
-            <div class="flex items-center">
-                <img src="assets/coin.png" alt="">
-                <p class="flex items-center">
-                   <span id="balance">0</span>
-                   BDT
-                </p>
-            </div>
+                <div class="flex items-center">
+                    <img src="assets/logo.png" alt="logo">
+                    <h3>Donate Bangladesh</h3>
+                </div>
 
-        </section>
+                <div class="flex items-center">
+                    <img src="assets/coin.png" alt>
+                    <p class="flex items-center">
+                        <span id="balance">0</span>
+                        BDT
+                    </p>
+                </div>
 
-        <section class="donationHistory text-center pt-20">
-            <button class="btn">Donation</button>
-            <button class="btn">History</button>
-        </section>
+            </section>
 
-    </nav>
-      <main class="w-11/12 mx-auto ">
+            <section class="donationHistory text-center pt-20">
+                <button class="btn">Donation</button>
+                <button class="btn">History</button>
+            </section>
+        </nav>
+        <main class="w-11/12 mx-auto ">
 
-        <img src="assets/feni.png" alt="">
-        
+            <section id="noakhali_Container"
+                class="border border-[rgba(17, 17, 17, 0.1)] rounded-2xl p-8 grid grid-cols-2  gap-8">
 
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/quota-protest.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/quota-protest.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/quota-protest.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/quota-protest.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/quota-protest.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/quota-protest.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/quota-protest.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/quota-protest.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/quota-protest.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-        <img src="assets/quota-protest.png" alt="">
-        <img src="assets/noakhali.png" alt="">
-       
-      </main>
+                <!-- left -->
+                <div>
+                    <img class src="assets/noakhali.png" alt>
+                </div>
+                <!-- Right -->
+                <div class="space-y-4">
+                    <!-- donationAmount -->
+                    <div class="flex items-center gap-2">
+                        <img class src="assets/coin.png" alt>
+                        <p class="flex items-center">
+                            <span class="pr-1" id="balance">0</span>
+                             BDT
+                        </p>
+                    </div>
+                    <h3 class="text-xl font-bold">Donate for Flood at Noakhali,
+                        Bangladesh</h3>
+                    <p> The recent floods in Noakhali have caused significant
+                        damage to homes infrastructure. Your donation will help
+                        provide essential supplies and to those affected by this
+                        disaster. Every contribution, big or small, makes
+                        difference. Please join us in supporting the relief
+                        efforts and making a positive impact on the lives of
+                        those in need.</p>
+                    <div class="pt-4 flex flex-col gap-4">
+                        <input
+                            class="w-full outline-none h-14 border border-[rgba(17, 17, 17, 0.1)] p-3  "
+                            type="text" name id
+                            placeholder="Write Donation Amount">
+                        <button
+                            class="mt-2 w-full p-4 bg-primary text-black text-center ">Donate
+                            Now</button>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="feniContainer"
+                class="p-8 grid grid-cols-2 items-center gap-8">
+
+            </section>
+
+            <section id="quotaMovementContainer"
+                class="p-8 grid grid-cols-2 items-center gap-8">
+
+            </section>
+
+        </main>
+
+        <script src="js/index.js"></script>
+        <script src="js/features.js"></script>
+        <script src="js/noakhali.js"></script>
+        <script src="js/feni.js"></script>
+        <script src="js/quotaMovement.js"></script>
     </body>
 </html>
