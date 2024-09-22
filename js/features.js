@@ -8,10 +8,15 @@ function getInputValueByID(id){
 function inputFieldValidation(input){
 
     let length= input.length;
+    
     for (const ch of input) {
         if(isNaN(ch)){
            return false;
         }
     }
     return true;
+}
+
+function showAlert(){
+    alert('Invalid Donation Amount');
 }

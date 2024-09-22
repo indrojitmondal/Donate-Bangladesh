@@ -125,10 +125,12 @@
                             <form class>
                                 <div class="form-control">
 
-                                    <input type="text" id="noakhaliDonationAmount"
+                                    <input type="text" id="noakhali" name="noakhaliamount"
                                         placeholder="Write Donation Amount"
                                         class="w-full outline-none h-14 border border-[rgba(17, 17, 17, 0.1)] p-3"
                                         required />
+
+                                    
                                 </div>
 
                                 <div class="form-control mt-6">
@@ -251,12 +253,34 @@
 
         </main>
 
+        <dialog id="my_modal" class="modal modal-bottom sm:modal-middle ">
+            <div class="modal-box w-80">
+                <h2 class="text-2xl font-bold text-center">Congrats!</h3>
+
+                 <div class="text-center ">
+                    <img class="pt-4 pb-4 w-[28px] mx-auto" src="assets/coin.png" alt>
+                    <p class="">You hav Donated for Humankind</p>
+                    <h3 class="text-lg font-semibold pt-3 pb-3">Successfully</h3>
+
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+
+                        <button class="btn text-center">close confirmation</button>
+
+                    </form>
+                 </div>     
+               
+
+            </div>
+        </dialog>
+       
         <script src="js/features.js"></script>
         <script src="js/index.js"></script>
 
         <script src="js/noakhali.js"></script>
         <script src="js/feni.js"></script>
         <script src="js/quotaMovement.js"></script>
+       
 
     </body>
 </html>
