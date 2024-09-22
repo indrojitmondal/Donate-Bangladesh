@@ -15,3 +15,7 @@ document.getElementById('historyButton').addEventListener('click', function(){
     document.getElementById('historyButton').classList.add('bg-primary');
     document.getElementById('donationButton').classList.remove('bg-primary');
 })
+
+// all donateButton 
+const allDonateButton = document.querySelectorAll('section button');
+console.log(allDonateButton);

@@ -69,7 +69,7 @@
                     class="flex items-center gap-1 lg:gap-2 lg:text-xl font-medium">
                     <img src="assets/coin.png" alt>
                     <p class="flex items-center">
-                        <span class="pr-1" id="balance">5500</span>
+                        <span class="pr-1" id="acoountBalance">5500</span>
                         BDT
                     </p>
                 </div>
@@ -84,24 +84,26 @@
                     class="ml-4 border border-[rgba(17, 17, 17, 0.3)] rounded-lg px-6 py-3">History</button>
             </menu>
         </nav>
-        <main class="w-11/12 mx-auto space-y-8 ">
+        <main class="w-11/12 mx-auto">
 
             <!-- donationContainer -->
-            <div id="donationContainer">
-                <section id="noakhali_Container"
-                    class="border border-[rgba(17, 17, 17, 0.1)] rounded-2xl p-8 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+            <div id="donationContainer" class="space-y-8">
+
+                <section id="noakhaliContainer"
+                    class="border border-[rgba(17, 17, 17, 0.1)] rounded-2xl p-8 grid grid-cols-1 items-center lg:grid-cols-12 gap-6 lg:gap-8 ">
 
                     <!-- left -->
-                    <div>
+                    <div class="lg:col-span-5">
                         <img class src="assets/noakhali.png" alt>
                     </div>
                     <!-- Right -->
-                    <div class="space-y-4">
+                    <div class="lg:col-span-7 space-y-4">
                         <!-- donationAmount -->
                         <div class="flex items-center gap-2">
                             <img class src="assets/coin.png" alt>
                             <p class="flex items-center">
-                                <span class="pr-1" id="balance">0</span>
+                                <span class="pr-1"
+                                    id="noakhaliDonationBalance">0</span>
                                 BDT
                             </p>
                         </div>
@@ -118,34 +120,45 @@
                             difference. Please join us in supporting the relief
                             efforts and making a positive impact on the lives of
                             those in need.</p>
-                        <div class="pt-4 flex flex-col gap-4">
-                            <input
-                                class="w-full outline-none h-14 border border-[rgba(17, 17, 17, 0.1)] p-3  "
-                                type="text" name id
-                                placeholder="Write Donation Amount">
-                            <button
-                                class="mt-2 w-full p-4 bg-primary text-black text-center ">Donate
-                                Now</button>
+                        <div class="pt-4 flex flex-col gap-4 ">
+
+                            <form class>
+                                <div class="form-control">
+
+                                    <input type="text" id="noakhaliDonationAmount"
+                                        placeholder="Write Donation Amount"
+                                        class="w-full outline-none h-14 border border-[rgba(17, 17, 17, 0.1)] p-3"
+                                        required />
+                                </div>
+
+                                <div class="form-control mt-6">
+                                    <button id="noakhaliDonationButton"
+                                        class="mt-2 w-full p-4 bg-primary text-black text-center">Donate
+                                        Now</button>
+                                </div>
+                            </form>
 
                         </div>
+
                     </div>
 
                 </section>
 
-                <section id="feni_Container"
-                    class="border border-[rgba(17, 17, 17, 0.1)] rounded-2xl p-8 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+                <section id="feniContainer"
+                    class="border border-[rgba(17, 17, 17, 0.1)] rounded-2xl p-8 grid grid-cols-1 items-center lg:grid-cols-12 gap-6 lg:gap-8 ">
 
                     <!-- left -->
-                    <div class>
+                    <div class="lg:col-span-5">
                         <img class src="assets/feni.png" alt>
                     </div>
                     <!-- Right -->
-                    <div class="space-y-4">
+                    <div class="lg:col-span-7 space-y-4">
                         <!-- donationAmount -->
-                        <div class="flex items-center gap-2 ">
+                        <div class="flex items-center gap-2">
                             <img class src="assets/coin.png" alt>
                             <p class="flex items-center">
-                                <span class="pr-1" id="balance">600</span>
+                                <span class="pr-1"
+                                    id="feniDonationBalance">600</span>
                                 BDT
                             </p>
                         </div>
@@ -153,83 +166,88 @@
                             Feni,Bangladesh</h3>
                         <p>The recent floods in Feni have devastated local
                             communities, leading to severe disruption and loss.
-                            Your
-                            generous donation will help provide immediate aid,
-                            including food, clean water, and medical supplies,
-                            to
-                            those affected by this calamity. Together, we can
-                            offer
-                            crucial support and help rebuild lives in the
-                            aftermath
-                            of this disaster. Every contribution counts towards
-                            making a real difference. Please consider donating
-                            today
-                            to assist those in urgent need.</p>
-                        <div class="pt-4 flex flex-col gap-4">
-                            <input
-                                class="w-full outline-none h-14 border border-[rgba(17, 17, 17, 0.1)] p-3  "
-                                type="text" name id
-                                placeholder="Write Donation Amount">
-                            <button
-                                class="mt-2 w-full p-4 bg-primary text-black text-center ">Donate
-                                Now</button>
+                            Your generous donation will help provide immediate
+                            aid, including food, clean water, and medical
+                            supplies, to those affected by this calamity.
+                            Together, we can offer crucial support and help
+                            rebuild lives in the aftermath of this disaster.
+                            Every contribution counts towards making a real
+                            difference. Please consider donating today to assist
+                            those in urgent need.</p>
+                        <div class="pt-4 flex flex-col gap-4 ">
+
+                            <form class>
+                                <div class="form-control">
+
+                                    <input type="text" id="feniDonationAmount"
+                                        placeholder="Write Donation Amount"
+                                        class="w-full outline-none h-14 border border-[rgba(17, 17, 17, 0.1)] p-3"
+                                        required />
+                                </div>
+
+                                <div class="form-control mt-6">
+                                    <button id="feniDonationButton"
+                                        class="mt-2 w-full p-4 bg-primary text-black text-center">Donate
+                                        Now</button>
+                                </div>
+                            </form>
 
                         </div>
+
                     </div>
 
                 </section>
 
-                <section id="quotaMovement_Container"
-                    class="border border-[rgba(17, 17, 17, 0.1)] rounded-2xl p-8 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+                <section id="QuotaContainer"
+                    class="border border-[rgba(17, 17, 17, 0.1)] rounded-2xl p-8 grid grid-cols-1 items-center lg:grid-cols-12 gap-6 lg:gap-8 ">
 
                     <!-- left -->
-                    <div class>
+                    <div class="lg:col-span-5">
                         <img class src="assets/quota-protest.png" alt>
                     </div>
                     <!-- Right -->
-                    <div class="space-y-4">
+                    <div class="lg:col-span-7 space-y-4">
                         <!-- donationAmount -->
-                        <div class="flex items-center gap-2 ">
+                        <div class="flex items-center gap-2">
                             <img class src="assets/coin.png" alt>
                             <p class="flex items-center">
-                                <span class="pr-1" id="balance">2400</span>
+                                <span class="pr-1"
+                                    id="quotaDonationBalance">2400</span>
                                 BDT
                             </p>
                         </div>
-                        <h3 class="text-xl font-bold">Aid for Injured in the
-                            Quota Movement</h3>
-                        <p>The recent Quota movement has resulted in numerous
-                            injuries and significant hardship for many
-                            individuals. Your support is crucial in providing
-                            medical assistance, rehabilitation, and necessary
-                            supplies to those affected. By contributing, you
-                            help ensure that injured individuals receive the
-                            care and support they need during this challenging
-                            time. Every donation plays a vital role in
-                            alleviating their suffering and aiding in their
-                            recovery. Please consider making a donation to
-                            support these brave individuals in their time of
-                            need.</p>
-                        <div class="pt-4 flex flex-col gap-4">
-                            <input
-                                class="w-full outline-none h-14 border border-[rgba(17, 17, 17, 0.1)] p-3  "
-                                type="text" name id
-                                placeholder="Write Donation Amount">
-                            <button
-                                class="mt-2 w-full p-4 bg-primary text-black text-center ">Donate
-                                Now</button>
+                        <h3 class="text-xl font-bold">Aid for Injured in the Quota Movement</h3>
+                        <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                        <div class="pt-4 flex flex-col gap-4 ">
+
+                            <form class>
+                                <div class="form-control">
+
+                                    <input type="text" id="quotaDonationAmount"
+                                        placeholder="Write Donation Amount"
+                                        class="w-full outline-none h-14 border border-[rgba(17, 17, 17, 0.1)] p-3"
+                                        required />
+                                </div>
+
+                                <div class="form-control mt-6">
+                                    <button id="quotaDonationButton"
+                                        class="mt-2 w-full p-4 bg-primary text-black text-center">Donate
+                                        Now</button>
+                                </div>
+                            </form>
 
                         </div>
+
                     </div>
 
                 </section>
+
             </div>
 
             <!-- historyContainer -->
             <div id="historyContainer" class="hidden">
 
             </div>
-        
 
         </main>
 
@@ -239,6 +257,6 @@
         <script src="js/noakhali.js"></script>
         <script src="js/feni.js"></script>
         <script src="js/quotaMovement.js"></script>
-        
+
     </body>
 </html>
