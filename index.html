@@ -21,6 +21,7 @@
                     light: '#82828A',
                     about: '#F8F8F8',
                     footer: '#292929',
+                    header: 'rgb(249, 247, 243)',
                     
         
                   },
@@ -50,35 +51,36 @@
 
     </head>
     <body class="font-lexend">
-        <nav class="w-11/12 mx-auto pt-2 pb-8 sticky top-0 z-20 bg-white">
+        <nav class="sticky top-0 z-20 bg-header ">
 
-            <section class="flex justify-between items-center">
-                <a href>Blog</a>
+            <header class="w-11/12 mx-auto flex justify-between items-center pt-4 lg:pb-9 pb-6">
+                <a href="" class="bg-primary text-black lg:text-xl font-semibold lg:px-6 px-3 py-1 rounded-lg">Blog</a>
 
-                <div class="flex items-center">
-                    <img src="assets/logo.png" alt="logo">
-                    <h3>Donate Bangladesh</h3>
+                <div class="flex items-center gap-1 lg:gap-3">
+                    
+                    <img class="w-[30px]" src="assets/logo.png" alt="logo">
+                    <h3 class="lg:text-xl font-semibold">Donate Bangladesh</h3>
                 </div>
-
-                <div class="flex items-center">
+             <!-- Total Balance -->
+                <div class="flex items-center gap-1 lg:gap-2 lg:text-xl font-medium">
                     <img src="assets/coin.png" alt>
                     <p class="flex items-center">
-                        <span id="balance">0</span>
+                        <span class="pr-1" id="balance">5500</span>
                         BDT
                     </p>
                 </div>
 
-            </section>
+            </header>
 
-            <section class="donationHistory text-center pt-20">
+            <menu class="donationHistory text-center lg:pt-10 lg:pb-10 pt-8 pb-8  bg-white">
                 <button class="btn">Donation</button>
                 <button class="btn">History</button>
-            </section>
+            </menu>
         </nav>
-        <main class="w-11/12 mx-auto ">
+        <main class="w-11/12 mx-auto  ">
 
             <section id="noakhali_Container"
-                class="border border-[rgba(17, 17, 17, 0.1)] rounded-2xl p-8 grid grid-cols-2  gap-8">
+                class="border border-[rgba(17, 17, 17, 0.1)] rounded-2xl p-8 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
 
                 <!-- left -->
                 <div>
@@ -117,6 +119,11 @@
 
             </section>
 
+      
+
+
+
+
             <section id="feniContainer"
                 class="p-8 grid grid-cols-2 items-center gap-8">
 
@@ -129,8 +136,9 @@
 
         </main>
 
-        <script src="js/index.js"></script>
         <script src="js/features.js"></script>
+        <script src="js/index.js"></script>
+        
         <script src="js/noakhali.js"></script>
         <script src="js/feni.js"></script>
         <script src="js/quotaMovement.js"></script>
