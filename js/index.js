@@ -20,3 +20,5 @@ document.getElementById('historyButton').addEventListener('click', function(){
 // all donateButton 
 const allDonateButton = document.querySelectorAll('section button');
 console.log(allDonateButton);
+
+// updated
