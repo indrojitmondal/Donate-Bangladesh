@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Donate Bangladesh</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
 
-        <!-- FontAweSome CDN -->
-        <script src="https://kit.fontawesome.com/b5a83736f2.js" crossorigin="anonymous"></script>
+    <!-- FontAweSome CDN -->
+    <script src="https://kit.fontawesome.com/b5a83736f2.js"
+      crossorigin="anonymous"></script>
 
-        <!-- DaisyUI Configuration -->
+    <!-- DaisyUI Configuration -->
 
-        <link
-            href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
-            rel="stylesheet" type="text/css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
             tailwind.config = {
               theme: {
                 extend: {
@@ -47,70 +48,68 @@
             }
             </script>
 
-        <!-- Google Font Configuration -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
-            rel="stylesheet">
+    <!-- Google Font Configuration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet">
 
-    </head>
-    <body class="font-lexend">
-        <nav class="sticky top-0 z-20 bg-header ">
+  </head>
+  <body class="font-lexend">
+    <nav class="sticky top-0 z-20 bg-header ">
 
-          
+      <header
+        class="md:w-11/12 md:mx-auto px-2 flex justify-between  items-center pt-4 lg:pb-9 pb-6">
+        <a href="index.html"
+          class="hidden md:block bg-primary text-black md:text-xl font-semibold md:px-6 px-3 py-1 rounded-lg">Home</a>
 
-          <header
-          class="lg:w-11/12 lg:mx-auto px-2 flex justify-between  items-center pt-4 lg:pb-9 pb-6">
-          <a href="index.html"
-              class="hidden lg:block bg-primary text-black lg:text-xl font-semibold lg:px-6 px-3 py-1 rounded-lg">Home</a>
+        <div class="ml-4 flex items-center gap-1 lg:gap-3">
 
-          <div class="flex items-center gap-1 lg:gap-3">
+          <img class="w-[30px]" src="assets/logo.png" alt="logo">
+          <h3 class="md:text-xl font-semibold">Donate Bangladesh</h3>
+        </div>
+        <!-- Total Balance -->
+        <div
+          class="flex items-center gap-1 md:gap-2 md:text-xl font-medium">
+          <img src="assets/coin.png" alt>
+          <p class="flex items-center">
+            <span class="pr-1" id="acoountBalance">5500</span>
+            BDT
+          </p>
+        </div>
 
-              <img class="w-[30px]" src="assets/logo.png" alt="logo">
-              <h3 class="lg:text-xl font-semibold">Donate Bangladesh</h3>
+        <div class="ml-2 md:hidden  relative">
+          <div id="menuIcon" role="button"
+            class="btn btn-ghost  border-1  border-gray-300 rounded-[50%] lg:hidden lg:bg-primary text-lg">
+
+            <i class="fa-solid fa-bars " id="bar"></i>
+
+            <i class="fa-solid fa-x hidden" id="cross"> </i>
+
           </div>
-          <!-- Total Balance -->
-          <div
-              class="flex items-center gap-1 lg:gap-2 lg:text-xl font-medium">
-              <img src="assets/coin.png" alt>
-              <p class="flex items-center">
-                  <span class="pr-1" id="acoountBalance">5500</span>
-                  BDT
-              </p>
-          </div>
 
-          <div class="ml-2 lg:hidden  relative">
-              <div id="menuIcon" role="button"
-                  class="btn btn-ghost  border-1  border-gray-300 rounded-[50%] lg:hidden lg:bg-primary text-lg">
+          <ul id="menuDropdown"
+            class="hidden  absolute right-0 bg-white rounded-box z-[1] mt-8">
+            <!-- mt-6 w-30 p-4 space-y-3 shadow text-base sm:flex sm: flex-col gap-5 -->
+            <li
+              class>
+              <!-- transition-colors ease-in-out duration-300 -->
+              <a href="index.html"
+                class=" border border-[rgba(17, 17, 17, 0.3)] rounded-lg px-6 py-3 bg-primary">Home</a>
+            </li>
 
-                  <i class="fa-solid fa-bars " id="bar"></i>
-
-                  <i class="fa-solid fa-x hidden" id="cross"> </i>
-
-              </div>
-
-              <ul id="menuDropdown"
-                  class="hidden  absolute right-0 bg-white rounded-box z-[1] mt-8">
-                  <!-- mt-6 w-30 p-4 space-y-3 shadow text-base sm:flex sm: flex-col gap-5 -->
-                  <li
-                      class="">
-                      <!-- transition-colors ease-in-out duration-300 -->
-                      <a href="index.html"
-                          class=" border border-[rgba(17, 17, 17, 0.3)] rounded-lg px-6 py-3 bg-primary">Home</a>
-                  </li>
-
-                  <!-- <li
+            <!-- <li
                       class="transition-colors ease-in-out duration-300">
                       <a href="blog.html"
                           class="bg-primary rounded-lg text-black px-3 py-1">Blog</a>
                   </li> -->
 
-              </ul>
+          </ul>
 
-          </div>
+        </div>
 
-          <script>
+        <script>
               document.getElementById('bar').addEventListener('click', function (){
                  
                  document.getElementById('bar').classList.add('hidden');
@@ -136,72 +135,85 @@
 
       </header>
 
-            <menu
-                class="lg:pt-10 lg:pb-10 pt-8 pb-8  bg-white lg:text-xl font-medium">
+      <menu
+        class="lg:pt-10 lg:pb-10 pt-8 pb-8  bg-white lg:text-xl font-medium">
 
-                <section class="w-11/12 mx-auto">
-                    <div class="flex gap-1 items-center ">
-                        <h3 class="text-xl font-bold">Important FAQ 
-                            
-                        </h3>
-                        <!-- <i class="fa-regular fa-circle-question text-xl font-bold"></i> -->
-                        <!-- <i class="fa-solid fa-question text-xl font-bold"></i>
+        <section class="w-11/12 mx-auto">
+          <div class="flex gap-1 items-center ">
+            <h3 class="text-xl font-bold">Important FAQ
+
+            </h3>
+            <!-- <i class="fa-regular fa-circle-question text-xl font-bold"></i> -->
+            <!-- <i class="fa-solid fa-question text-xl font-bold"></i>
                         -->
-                        <i class="fa-solid fa-comment-medical"></i>
-                        
-                        <!-- <img class="w-8 text-xl font-bold" src="assets/question.png" alt="">
+            <i class="fa-solid fa-comment-medical"></i>
+
+            <!-- <img class="w-8 text-xl font-bold" src="assets/question.png" alt="">
                         <img class="w-8" src="assets/question.png" alt=""> -->
-                   
-                   
-                   
-                    </div>
-                    
-                </section>
-            </menu>
 
-        </nav>
-        <main class="w-11/12 mx-auto space-y-8 pt-5 ">
+          </div>
 
-            <div class="collapse collapse-plus bg-base-200">
-                <input type="radio" name="my-accordion-3" checked="checked" />
-                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
-                <div class="collapse-content">
-                  <p>DOM is one kind of component of HTML documents that can modify dynamically using programming language like JavaScript.</p>
-                </div>
-              </div>
-              <div class="collapse collapse-plus bg-base-200">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
-                <div class="collapse-content">
-                  <p>I select an element in different ways. If I need only for a specific document then I use getElementById.And If I need an array of documents then I use querySelectorALL(). Sometime I use getElementsByClassName to modify some similar documents.</p>
-                </div>
-              </div>
-              <div class="collapse collapse-plus bg-base-200">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
-                <div class="collapse-content">
-                  <p>Event delegation in the context of the DOM can be defined that it is one kind of root event listener by whom its child node can be event just by using event.target. Its an optimization solution of large code or more event listener.</p>
-                </div>
-              </div>
+        </section>
+      </menu>
 
-              <div class="collapse collapse-plus bg-base-200">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
-                <div class="collapse-content">
-                  <p>I manipulate an element's attributes using setAttribute('attributeName','value') and removeAttribute('attributeName'). And I style the DOM using 'style' keyword and properties like 'color', just for example dom.style.color='green'.</p>
-                </div>
-              </div>
+    </nav>
+    <main class="w-11/12 mx-auto space-y-8 pt-5 ">
 
-        </main>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What is the Document
+          Object Model (DOM)?</div>
+        <div class="collapse-content">
+          <p>DOM is one kind of component of HTML documents that can modify
+            dynamically using programming language like JavaScript.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">How do you select an
+          element from the DOM?</div>
+        <div class="collapse-content">
+          <p>I select an element in different ways. If I need only for a
+            specific document then I use getElementById.And If I need an array
+            of documents then I use querySelectorALL(). Sometime I use
+            getElementsByClassName to modify some similar documents.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">What is event delegation
+          in the context of the DOM, and why is it useful?</div>
+        <div class="collapse-content">
+          <p>Event delegation in the context of the DOM can be defined that it
+            is one kind of root event listener by whom its child node can be
+            event just by using event.target. Its an optimization solution of
+            large code or more event listener.</p>
+        </div>
+      </div>
 
-        <!-- <script src="js/features.js"></script>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">How do you manipulate an
+          element's attributes and styles using the DOM?</div>
+        <div class="collapse-content">
+          <p>I manipulate an element's attributes using
+            setAttribute('attributeName','value') and
+            removeAttribute('attributeName'). And I style the DOM using 'style'
+            keyword and properties like 'color', just for example
+            dom.style.color='green'.</p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- <script src="js/features.js"></script>
         <script src="js/index.js"></script>
 
         <script src="js/noakhali.js"></script>
         <script src="js/feni.js"></script>
         <script src="js/quotaMovement.js"></script> -->
 
-    </body>
+  </body>
 </html>
 
 <!-- Please update -->
