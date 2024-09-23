@@ -23,11 +23,11 @@ document.getElementById('quotaDonationButton').addEventListener('click', functio
 
        let quotaDonationBalance = getInnerTextById('quotaDonationBalance');
        quotaDonationBalance +=x;
-       document.getElementById('quotaDonationBalance').innerText=quotaDonationBalance;
+       document.getElementById('quotaDonationBalance').innerText=quotaDonationBalance.toFixed(2);
 
        
        acoountBalance -=x;
-       document.getElementById('acoountBalance').innerText=acoountBalance;
+       document.getElementById('acoountBalance').innerText=acoountBalance.toFixed(2);
        
        let historyContainer= document.getElementById('historyContainer');
        historyContainer.classList.add('space-y-4');

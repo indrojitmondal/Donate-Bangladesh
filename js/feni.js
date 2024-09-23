@@ -25,11 +25,11 @@ document.getElementById('feniDonationButton').addEventListener('click', function
 
         let feniDonationBalance = getInnerTextById('feniDonationBalance');
         feniDonationBalance +=x;
-        document.getElementById('feniDonationBalance').innerText=feniDonationBalance;
+        document.getElementById('feniDonationBalance').innerText=feniDonationBalance.toFixed(2);
 
         
         acoountBalance -=x;
-        document.getElementById('acoountBalance').innerText=acoountBalance;
+        document.getElementById('acoountBalance').innerText=acoountBalance.toFixed(2);
         
         let historyContainer= document.getElementById('historyContainer');
         historyContainer.classList.add('space-y-4');

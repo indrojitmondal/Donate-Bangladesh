@@ -25,11 +25,11 @@ document.getElementById('noakhaliDonationButton').addEventListener('click', func
 
         let noakhaliDonationBalance = getInnerTextById('noakhaliDonationBalance');
         noakhaliDonationBalance +=x;
-        document.getElementById('noakhaliDonationBalance').innerText=noakhaliDonationBalance;
+        document.getElementById('noakhaliDonationBalance').innerText=noakhaliDonationBalance.toFixed(2);
 
         
         acoountBalance -=x;
-        document.getElementById('acoountBalance').innerText=acoountBalance;
+        document.getElementById('acoountBalance').innerText=acoountBalance.toFixed(2);
         
         let historyContainer= document.getElementById('historyContainer');
         historyContainer.classList.add('space-y-4');
