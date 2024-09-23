@@ -38,7 +38,7 @@ document.getElementById('noakhaliDonationButton').addEventListener('click', func
          newDiv.classList.add('border','border-[#1111111a]','rounded-2xl','p-8');
         let h3 = document.createElement('h3');
         h3.classList.add('text-md', 'font-bold');
-        h3.innerHTML=`${x}Taka is Donated for Donate for Flood at Noakhali, Bangladesh.
+        h3.innerHTML=`${x} Taka is Donated for Donate for Flood at Noakhali, Bangladesh.
         `;
         let p= document.createElement('p');
         p.classList.add('text-[#111111b3]');

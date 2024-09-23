@@ -13,7 +13,7 @@ function inputFieldValidation(input){
     let length= input.length;
     
     for (const ch of input) {
-        if(isNaN(ch)){
+        if(isNaN(ch) && ch!='.'){
            return false;
         }
     }
