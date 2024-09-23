@@ -1,3 +1,4 @@
+
 console.log('connected index.js');
 document.getElementById('donationButton').addEventListener('click', function(){
    

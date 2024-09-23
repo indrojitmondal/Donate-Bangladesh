@@ -1,3 +1,4 @@
+
 console.log('connected feni.js');
 // const  input=document.getElementById('feniDonationAmount').value;
 
@@ -55,4 +56,3 @@ document.getElementById('feniDonationButton').addEventListener('click', function
     }
 
 })
-

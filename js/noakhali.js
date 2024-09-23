@@ -1,3 +1,4 @@
+
 console.log('connected noakhali.js');
 
 const  input=document.getElementById('noakhaliDonationAmount').value;
@@ -13,7 +14,7 @@ document.getElementById('noakhaliDonationButton').addEventListener('click', func
         alert('Please Write some amount');
     }
     
-    else if(x===false || x>acoountBalance || x<0){
+    else if(x===false || x>acoountBalance || x<0 || x===0){
       showAlert();
     }
     else 
@@ -55,8 +56,3 @@ document.getElementById('noakhaliDonationButton').addEventListener('click', func
     }
 
 })
-
-
-
-
-
