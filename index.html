@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
     <head>
-        <meta charset="UTF-8" >
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Donate Bangladesh</title>
+
+        <!-- FontAweSome CDN -->
+        <script src="https://kit.fontawesome.com/b5a83736f2.js"
+            crossorigin="anonymous"></script>
+
         <!-- DaisyUI Configuration -->
 
         <link
@@ -55,9 +60,9 @@
         <nav class="sticky top-0 z-20 bg-header ">
 
             <header
-                class="lg:w-11/12 lg:mx-auto px-2 flex justify-between items-center pt-4 lg:pb-9 pb-6">
+                class="lg:w-11/12 lg:mx-auto px-2 flex justify-between  items-center pt-4 lg:pb-9 pb-6">
                 <a href="blog.html"
-                    class="bg-primary text-black lg:text-xl font-semibold lg:px-6 px-3 py-1 rounded-lg">Blog</a>
+                    class="hidden lg:block bg-primary text-black lg:text-xl font-semibold lg:px-6 px-3 py-1 rounded-lg">Blog</a>
 
                 <div class="flex items-center gap-1 lg:gap-3">
 
@@ -74,15 +79,83 @@
                     </p>
                 </div>
 
+                <div class="ml-2 lg:hidden  relative">
+                    <div id="menuIcon" role="button"
+                        class="btn btn-ghost  border-1  border-gray-300 rounded-[50%] lg:hidden lg:bg-primary text-lg">
+
+                        <i class="fa-solid fa-bars " id="bar"></i>
+
+                        <i class="fa-solid fa-x hidden" id="cross"> </i>
+
+                    </div>
+
+                    <ul id="menuDropdown"
+                        class="hidden  absolute right-0 bg-white rounded-box z-[1] mt-8">
+                        <!-- mt-6 w-30 p-4 space-y-3 shadow text-base sm:flex sm: flex-col gap-5 -->
+                        <li
+                            class="">
+                            <!-- transition-colors ease-in-out duration-300 -->
+                            <a href="blog.html"
+                                class=" border border-[rgba(17, 17, 17, 0.3)] rounded-lg px-6 py-3 bg-primary">Blog</a>
+                        </li>
+
+                        <!-- <li
+                            class="transition-colors ease-in-out duration-300">
+                            <a href="blog.html"
+                                class="bg-primary rounded-lg text-black px-3 py-1">Blog</a>
+                        </li> -->
+
+                    </ul>
+
+                </div>
+
+                <script>
+                    document.getElementById('bar').addEventListener('click', function (){
+                       
+                       document.getElementById('bar').classList.add('hidden');
+                       document.getElementById('cross').classList.remove('hidden');
+                       
+                       document.getElementById('menuDropdown').classList.remove('hidden');
+
+
+                    })
+
+                    document.getElementById('cross').addEventListener('click', function (){
+                       
+                       document.getElementById('cross').classList.add('hidden');
+                       document.getElementById('bar').classList.remove('hidden');
+                       
+                       document.getElementById('menuDropdown').classList.add('hidden');
+
+
+                    })
+
+
+               </script>
+
             </header>
 
-            <menu
-                class="text-center    lg:pt-10 lg:pb-10 pt-8 pb-8  bg-white lg:text-xl font-medium">
+            <!-- <menu
+                class="lg:text-center pl-2 sm:flex sm:flex-col sm:gap-4   lg:pt-10 lg:pb-10 pt-8 pb-8  bg-white lg:text-xl font-medium">
                 <button id="donationButton"
-                    class="border border-[rgba(17, 17, 17, 0.3)] rounded-lg px-6 py-3 bg-primary">Donation</button>
+                    class="block lg:inline border border-[rgba(17, 17, 17, 0.3)] rounded-lg px-6 py-3 bg-primary">Donation</button>
                 <button id="historyButton"
-                    class="ml-4 border border-[rgba(17, 17, 17, 0.3)] rounded-lg px-6 py-3">History</button>
+                    class="block lg:inline lg:ml-4 border border-[rgba(17, 17, 17, 0.3)] rounded-lg px-6 py-3">History</button>
+            </menu> -->
+
+            <menu
+                class="lg:pt-10 lg:pb-10  pb-8  bg-white lg:text-xl font-medium">
+
+                <section class="lg:text-center ">
+
+                    <button id="donationButton"
+                        class="border border-[rgba(17, 17, 17, 0.3)] rounded-lg px-6 py-3 bg-primary">Donation</button>
+                    <button id="historyButton"
+                        class="lg:ml-4 border border-[rgba(17, 17, 17, 0.3)] rounded-lg px-6 py-3">History</button>
+
+                </section>
             </menu>
+
         </nav>
         <main class="w-11/12 mx-auto ">
 
@@ -125,12 +198,13 @@
                             <form class>
                                 <div class="form-control">
 
-                                    <input type="text" id="noakhaliDonationAmount" name="noakhaliamount"
+                                    <input type="text"
+                                        id="noakhaliDonationAmount"
+                                        name="noakhaliamount"
                                         placeholder="Write Donation Amount"
                                         class="w-full outline-none h-14 border border-[rgba(17, 17, 17, 0.1)] p-3"
                                         required />
 
-                                    
                                 </div>
 
                                 <div class="form-control mt-6">
@@ -218,8 +292,20 @@
                                 BDT
                             </p>
                         </div>
-                        <h3 class="text-xl font-bold">Aid for Injured in the Quota Movement</h3>
-                        <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                        <h3 class="text-xl font-bold">Aid for Injured in the
+                            Quota Movement</h3>
+                        <p>The recent Quota movement has resulted in numerous
+                            injuries and significant hardship for many
+                            individuals. Your support is crucial in providing
+                            medical assistance, rehabilitation, and necessary
+                            supplies to those affected. By contributing, you
+                            help ensure that injured individuals receive the
+                            care and support they need during this challenging
+                            time. Every donation plays a vital role in
+                            alleviating their suffering and aiding in their
+                            recovery. Please consider making a donation to
+                            support these brave individuals in their time of
+                            need.</p>
                         <div class="pt-4 flex flex-col gap-4 ">
 
                             <form class>
@@ -257,30 +343,31 @@
             <div class="modal-box w-80">
                 <h2 class="text-2xl font-bold text-center">Congrats!</h3>
 
-                 <div class="text-center ">
-                    <img class="pt-4 pb-4 w-[28px] mx-auto" src="assets/coin.png" alt>
-                    <p class="">You have Donated for Humankind</p>
-                    <h3 class="text-lg font-semibold pt-3 pb-3">Successfully</h3>
+                <div class="text-center ">
+                    <img class="pt-4 pb-4 w-[28px] mx-auto"
+                        src="assets/coin.png" alt>
+                    <p class>You have Donated for Humankind</p>
+                    <h3
+                        class="text-lg font-semibold pt-3 pb-3">Successfully</h3>
 
                     <form method="dialog">
                         <!-- if there is a button in form, it will close the modal -->
 
-                        <button class="btn text-center">close confirmation</button>
+                        <button class="btn text-center">close
+                            confirmation</button>
 
                     </form>
-                 </div>     
-               
+                </div>
 
             </div>
         </dialog>
-       
+
         <script src="js/features.js"></script>
         <script src="js/index.js"></script>
 
         <script src="js/noakhali.js"></script>
         <script src="js/feni.js"></script>
         <script src="js/quotaMovement.js"></script>
-       
 
     </body>
 </html>

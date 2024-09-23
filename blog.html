@@ -60,27 +60,81 @@
 
           
 
-            <header
-                class="lg:w-11/12 lg:mx-auto px-2 flex justify-between items-center pt-4 lg:pb-9 pb-6">
-                <a href="index.html"
-                    class="bg-primary text-black lg:text-xl font-semibold lg:px-6 px-2 py-1 rounded-lg">Home</a>
+          <header
+          class="lg:w-11/12 lg:mx-auto px-2 flex justify-between  items-center pt-4 lg:pb-9 pb-6">
+          <a href="index.html"
+              class="hidden lg:block bg-primary text-black lg:text-xl font-semibold lg:px-6 px-3 py-1 rounded-lg">Home</a>
 
-                <div class="flex items-center gap-1 lg:gap-3">
+          <div class="flex items-center gap-1 lg:gap-3">
 
-                    <img class="w-[30px]" src="assets/logo.png" alt="logo">
-                    <h3 class="lg:text-xl font-semibold">Donate Bangladesh</h3>
-                </div>
-                <!-- Total Balance -->
-                <div
-                    class="flex items-center gap-1 lg:gap-2 lg:text-xl font-medium">
-                    <img src="assets/coin.png" alt>
-                    <p class="flex items-center">
-                        <span class="pr-1" id="acoountBalance">5500</span>
-                        BDT
-                    </p>
-                </div>
+              <img class="w-[30px]" src="assets/logo.png" alt="logo">
+              <h3 class="lg:text-xl font-semibold">Donate Bangladesh</h3>
+          </div>
+          <!-- Total Balance -->
+          <div
+              class="flex items-center gap-1 lg:gap-2 lg:text-xl font-medium">
+              <img src="assets/coin.png" alt>
+              <p class="flex items-center">
+                  <span class="pr-1" id="acoountBalance">5500</span>
+                  BDT
+              </p>
+          </div>
 
-            </header>
+          <div class="ml-2 lg:hidden  relative">
+              <div id="menuIcon" role="button"
+                  class="btn btn-ghost  border-1  border-gray-300 rounded-[50%] lg:hidden lg:bg-primary text-lg">
+
+                  <i class="fa-solid fa-bars " id="bar"></i>
+
+                  <i class="fa-solid fa-x hidden" id="cross"> </i>
+
+              </div>
+
+              <ul id="menuDropdown"
+                  class="hidden  absolute right-0 bg-white rounded-box z-[1] mt-8">
+                  <!-- mt-6 w-30 p-4 space-y-3 shadow text-base sm:flex sm: flex-col gap-5 -->
+                  <li
+                      class="">
+                      <!-- transition-colors ease-in-out duration-300 -->
+                      <a href="index.html"
+                          class=" border border-[rgba(17, 17, 17, 0.3)] rounded-lg px-6 py-3 bg-primary">Home</a>
+                  </li>
+
+                  <!-- <li
+                      class="transition-colors ease-in-out duration-300">
+                      <a href="blog.html"
+                          class="bg-primary rounded-lg text-black px-3 py-1">Blog</a>
+                  </li> -->
+
+              </ul>
+
+          </div>
+
+          <script>
+              document.getElementById('bar').addEventListener('click', function (){
+                 
+                 document.getElementById('bar').classList.add('hidden');
+                 document.getElementById('cross').classList.remove('hidden');
+                 
+                 document.getElementById('menuDropdown').classList.remove('hidden');
+
+
+              })
+
+              document.getElementById('cross').addEventListener('click', function (){
+                 
+                 document.getElementById('cross').classList.add('hidden');
+                 document.getElementById('bar').classList.remove('hidden');
+                 
+                 document.getElementById('menuDropdown').classList.add('hidden');
+
+
+              })
+
+
+         </script>
+
+      </header>
 
             <menu
                 class="lg:pt-10 lg:pb-10 pt-8 pb-8  bg-white lg:text-xl font-medium">
